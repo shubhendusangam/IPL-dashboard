@@ -1,11 +1,17 @@
 package com.practice.ipldashboard.data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "MATCHOUTPUT")
 public class MatchOutput {
+   @Id
    private long id;
    private String city;
-   private LocalDateTime date;
+   private LocalDate date;
    private String playerOfMatch;
    private String venue;
    private String neutralVenue;
@@ -37,11 +43,11 @@ public class MatchOutput {
       this.city = city;
    }
 
-   public LocalDateTime getDate() {
+   public LocalDate getDate() {
       return date;
    }
 
-   public void setDate(LocalDateTime date) {
+   public void setDate(LocalDate date) {
       this.date = date;
    }
 

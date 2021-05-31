@@ -1,5 +1,6 @@
 package com.practice.ipldashboard.data;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
@@ -14,7 +15,7 @@ public class MatchProcessor implements ItemProcessor<MatchInput, MatchOutput> {
       MatchOutput matchOutput = new MatchOutput();
       matchOutput.setId(Long.parseLong(matchInput.getId()));
       matchOutput.setCity(matchInput.getCity());
-      matchOutput.setDate(LocalDateTime.parse(matchInput.getDate()));
+      matchOutput.setDate(LocalDate.parse(matchInput.getDate()));
       matchOutput.setPlayerOfMatch(matchInput.getPlayer_of_match());
       matchOutput.setVenue(matchInput.getVenue());
 
