@@ -1,4 +1,4 @@
-package com.practice.ipldashboard.data;
+package com.practice.ipldashboard.model;
 
 import java.time.LocalDate;
 import javax.persistence.Entity;
@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MATCHOUTPUT")
+@Table(name = "MATCH_OUTPUT")
 public class MatchOutput {
    @Id
    private long id;
