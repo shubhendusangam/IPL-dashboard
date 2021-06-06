@@ -11,7 +11,7 @@ public class MatchProcessor implements ItemProcessor<MatchInput, MatchOutput> {
    private static final Logger log = LoggerFactory.getLogger(MatchProcessor.class);
 
    @Override
-   public MatchOutput process(final MatchInput matchInput) throws Exception {
+   public MatchOutput process(final MatchInput matchInput) {
       MatchOutput matchOutput = new MatchOutput();
       matchOutput.setId(Long.parseLong(matchInput.getId()));
       matchOutput.setCity(matchInput.getCity());
@@ -32,12 +32,13 @@ public class MatchProcessor implements ItemProcessor<MatchInput, MatchOutput> {
       }
       matchOutput.setTeam1(firstInningsTeam);
       matchOutput.setTeam2(secondInningsTeam);
+      matchOutput.setTossWinner(matchInput.getToss_winner());
+      matchOutput.setMethod(matchInput.getMethod());
 
       matchOutput.setTossDecision(matchInput.getToss_decision());
       matchOutput.setMatchWinner(matchInput.getWinner());
       matchOutput.setResult(matchInput.getResult());
       matchOutput.setResultMargin(matchInput.getResult_margin());
-      matchOutput.setEliminator(matchInput.getEliminator());
       matchOutput.setUmpire1(matchInput.getUmpire1());
       matchOutput.setUmpire2(matchInput.getUmpire2());
 

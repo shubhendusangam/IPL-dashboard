@@ -14,7 +14,6 @@ public class MatchOutput {
    private LocalDate date;
    private String playerOfMatch;
    private String venue;
-   private String neutralVenue;
    private String team1;
    private String team2;
    private String tossWinner;
@@ -22,10 +21,12 @@ public class MatchOutput {
    private String matchWinner;
    private String result;
    private String resultMargin;
-   private String eliminator;
    private String method;
    private String umpire1;
    private String umpire2;
+
+   public MatchOutput() {
+   }
 
    public long getId() {
       return id;
@@ -65,14 +66,6 @@ public class MatchOutput {
 
    public void setVenue(String venue) {
       this.venue = venue;
-   }
-
-   public String getNeutralVenue() {
-      return neutralVenue;
-   }
-
-   public void setNeutralVenue(String neutralVenue) {
-      this.neutralVenue = neutralVenue;
    }
 
    public String getTeam1() {
@@ -129,14 +122,6 @@ public class MatchOutput {
 
    public void setResultMargin(String resultMargin) {
       this.resultMargin = resultMargin;
-   }
-
-   public String getEliminator() {
-      return eliminator;
-   }
-
-   public void setEliminator(String eliminator) {
-      this.eliminator = eliminator;
    }
 
    public String getMethod() {
